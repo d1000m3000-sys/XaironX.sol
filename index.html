@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XaironX</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>XaironX</h1>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🔥 Streak</h3>
+      <p id="streak">0</p>
+    </div>
+
+    <div class="card">
+      <h3>💰 XRX</h3>
+      <p id="coins">0</p>
+    </div>
+
+  </div>
+
+  <button class="main-btn" onclick="completeDay()">✔ أكملت اليوم</button>
+
+  <div class="card">
+    <h3>🏆 التحدي الحالي</h3>
+    <p id="challenge">7 أيام التزام</p>
+    <p id="progress">0 / 7</p>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
